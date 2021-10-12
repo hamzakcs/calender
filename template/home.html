@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <center>
+        <h1>Event Calender-{{ month }} {{ year }}</h1><br>
+    <!--<h1>Today is{{ name }}!</h1><br><br>-->
+        As Of {{ current_time }}<br><br>
+        {{ cal | safe }}<br><br>
+        <h2>{{ month_number }}</h2><br><br><br><br>
+        Copyright (c) {{ current_year }}
+    </center>
+
+{% endblock %}
