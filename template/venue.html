@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Venue...</h1><br>
+<table class="table table-striped table-hover table-bordered">
+        {% for Venue in venues_list %}
+        <tr>
+            <td><a href="{% url 'show-venue' Venue.id %}" class="text-decoration-none text-success">{{ Venue }}</a></td>
+            <td align="right"><a href="{% url 'update-venue' Venue.id %}"><button class="btn btn-outline-success btn-sm" type="button" name="update">Update</button></a>
+                <a href="{% url 'delete-venue' Venue.id %}"><button class="btn btn-outline-danger btn-sm" type="button" name="update">Delete</button></a></td>
+        </tr>
+        {% endfor %}
+
+</table>
+{% endblock %}
